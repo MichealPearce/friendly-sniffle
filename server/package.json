@@ -1,0 +1,8 @@
+{
+	"name": "server",
+	"type": "module",
+	"devDependencies": {
+		"@types/node": "^18.15.3",
+		"vite": "^4.2.0"
+	}
+}
