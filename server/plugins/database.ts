@@ -5,7 +5,7 @@ import { DataSource } from 'typeorm'
 export async function databasePlugin(instance: FastifyInstance) {
 	const source = new DataSource({
 		type: 'sqlite',
-		database: 'database.sqlite',
+		database: './bin/database.sqlite',
 		entities: [User],
 		synchronize: import.meta.env.DEV,
 	})
