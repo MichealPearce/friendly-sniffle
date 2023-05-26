@@ -4,7 +4,7 @@ import { Column, CreateDateColumn, Entity } from 'typeorm'
 export interface UserData extends ModelUUIDData {
 	firstName: string
 	LastName: string
-	password: string
+	password?: string
 	email: string
 }
 
@@ -17,7 +17,7 @@ export class User extends ModelUUID<UserData> implements UserData {
 	declare LastName: string
 
 	@Column({ select: false })
-	declare password: string
+	declare password?: string
 
 	@Column({ unique: true, type: 'varchar' })
 	declare email: string
