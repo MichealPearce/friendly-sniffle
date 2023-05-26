@@ -6,7 +6,6 @@ export interface UserData extends ModelUUIDData {
 	LastName: string
 	password: string
 	email: string
-	accountCreationDate: Date
 }
 
 @Entity()
@@ -17,12 +16,9 @@ export class User extends ModelUUID<UserData> implements UserData {
 	@Column('varchar')
 	declare LastName: string
 
-	@Column('varchar')
+	@Column({ select: false })
 	declare password: string
 
-	@Column({ unique: true })
+	@Column({ unique: true, type: 'varchar' })
 	declare email: string
-
-	@CreateDateColumn()
-	declare accountCreationDate: Date
 }
