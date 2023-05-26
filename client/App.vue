@@ -8,6 +8,7 @@ import HelloWorld from './components/HelloWorld.vue'
 			href="https://vitejs.dev"
 			target="_blank"
 		>
+		Hello World
 			<img
 				src="/vite.svg"
 				class="logo"
