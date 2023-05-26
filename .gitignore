@@ -38,3 +38,6 @@ dist-ssr
 
 node_modules
 .env
+
+bin/*
+!bin/.gitkeep
